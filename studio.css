@@ -1,0 +1,45 @@
+body{
+background-color: lavender;
+font-family: monospace;
+}
+textarea{
+    width: 30%;
+    float:left;
+    margin-left: 30%;
+}
+
+
+
+header{
+    width: 70%;
+    height:150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: skyblue;
+    margin: auto;
+
+
+}
+
+
+#movieTitle{
+    text-align: center;
+}
+img{
+    width: 70%;
+    height:150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+
+}
+
+main{
+width: 60%;
+margin:auto;
+}
