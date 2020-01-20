@@ -1,25 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // let reviewInput = document.querySelector("#reviewInput");
+  
 
 
   //could not remove div onclick since div was declared going to try to make bigger div to remove.
   
-  
-  
-  
-  // button.addEventListener("click",()=>{
-    
-  //     let ul = document.querySelector("ul")
-  //     let li = document.createElement("li")
-  //     li.innerText = reviewInput.value
-  //     ul.appendChild(li)
-  //   //   li.appendChild(reviewInput.value)
-  //     reviewInput.value = ""
-
-    
-    
-  // })
-   
     let select = document.querySelector("select");
   const getMovies = async () => {
     try {
@@ -30,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       getMovies.forEach(movie => {
 
         let option = document.createElement("option");
+        option.innerHTML = "select"
         option.innerText = movie.title;
         option.value = movie.url;
         select.appendChild(option);
@@ -76,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   select.addEventListener("change", event => {
     getMovieDescription(event.target.value);
   });
-
+  reviews.innerText = ""
 let button = document.createElement("button")
 button.innerText = "click here for movie reviews"
 button.addEventListener("click",()=>{
@@ -84,6 +69,17 @@ let reviews = document.querySelector("#reviews")
 reviews.innerText = "Movie Reviews"
 let h3 = document.querySelector("h3")
 h3.innerText = ""
+let li = document.createElement("li")
+//li.innerText = "good movie"
+reviews.appendChild(li)
+
+
+
+
+
+
+
+
   })
 
   // console.log(reviewInput);
