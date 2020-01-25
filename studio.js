@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         option.innerText = movie.title;
         option.value = movie.url;
         select.appendChild(option);
+   
       });
     } catch (err) {
       console.log(err);
@@ -28,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const getMovieDescription = async url => {
     let h2 = document.createElement("h2");
     let h3 = document.createElement("h3");
+  
+ 
 
     try {
       let res = await axios.get(url);
@@ -37,19 +40,62 @@ document.addEventListener("DOMContentLoaded", () => {
       let div = document.querySelector("div");
       if (div) {
         document.body.removeChild(div);
+     
+        // document.body.removeChild(button);
         // div.removeChild(textarea)
       }
+  
       div = document.createElement("div");
-      // let textarea = document.createElement("textarea")
-      // textarea.value=""
+      button = document.createElement("button")
+      button.innerText = "WRite your own review"
       h2.innerText = "Synopsis of:  " + movietitle.title;
       h3.innerText = movietitle.description;
+      let input = document.createElement("input")
+      input.value = ""
+      // h3.innerHTML = <button></button>
       document.body.appendChild(div);
-     
       div.appendChild(h2);
       div.appendChild(h3);
-      // div.appendChild(textarea)
       div.appendChild(button)
+      button.addEventListener("click",()=>{
+   console.log("hey")
+   document.body.replaceChild(input,div)
+ 
+   let button = document.createElement("button")
+   button.innerText = "Submit Review"
+   document.body.appendChild(button)
+   button.addEventListener("click",()=>{
+     let ul = document.createElement("ul")
+     let li = document.createElement("li")
+     li.innerText = input.value
+    ul.appendChild(li)
+    document.body.appendChild(ul)
+
+
+  
+
+
+
+
+   })
+
+
+
+   
+ 
+
+  //  let ul = document.createElement("ul")
+  //  let li = document.createElement("li")
+  //  div.appendChild(ul)
+  //  ul.appendChild(li)
+  //  li.innerText = "test"
+ 
+
+      })
+  
+    
+      // div.appendChild(textarea)
+    //   div.appendChild(button)
     
     
     } catch (err) {
@@ -61,29 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
   select.addEventListener("change", event => {
     getMovieDescription(event.target.value);
   });
-  reviews.innerText = ""
-let button = document.createElement("button")
-button.innerText = "click here for movie reviews"
-button.addEventListener("click",()=>{
-let reviews = document.querySelector("#reviews")
-reviews.innerText = "Movie Reviews"
-let h3 = document.querySelector("h3")
-h3.innerText = ""
-let li = document.createElement("li")
-//li.innerText = "good movie"
-reviews.appendChild(li)
 
 
-
-
-
-
-
-
-  })
-
-  // console.log(reviewInput);
-  // reviewInput.addEventListener("input", bee => {
-  //   console.log(bee);
-  // });
 });

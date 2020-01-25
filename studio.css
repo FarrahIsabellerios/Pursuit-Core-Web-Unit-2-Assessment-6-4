@@ -4,6 +4,7 @@ body{
 background-color: wheat;
 background-size: 855px;
 font-family: monospace;
+
 }
 
 
@@ -12,7 +13,7 @@ h1{
     text-align: center;
       z-index: 7;
       margin-top: 0%;
-      border-bottom: red;
+      border-bottom: crimson;
       border-bottom-width: 44px;
       border-style: solid;
       border-top-width: 0px;
@@ -146,7 +147,7 @@ float: left;
 select{
   
 
-background-color: red;
+background-color:crimson;
 border-width: 8px;
 border-color: black;
 height: 69px;
@@ -156,4 +157,53 @@ font-family: fantasy;
 text-align: center;
 text-indent: 15%;
 float: left;
+}
+
+h2,h3{
+text-align: center;
+width: 599px; 
+border:crimson;
+margin-left: 30%;
+}
+h2{
+    font-size: 44px;
+}
+h3{
+    font-size: 24px;
+}
+button{
+    margin-bottom: 400px;
+    text-align: center;
+    margin-left:46%;
+    width: 150px;
+    height: 60px;
+    background-color: crimson;
+    text-decoration: blanchedalmond;
+    font-family: fantasy;
+    font-weight:bolder;
+    font-size: 20px;
+}
+
+input{
+    margin-top: 140px;
+    text-align: center;
+    margin-left:38%;
+    width: 350px;
+    height: 160px;
+    font-family: fantasy;
+    font-weight:bolder;
+    font-size: 20px;
+}
+
+button{
+ 
+    text-align: center;
+    justify-content: center;
+}
+div{ 
+    justify-content: center;
+}
+
+ul{
+    size: 133px;
 }
